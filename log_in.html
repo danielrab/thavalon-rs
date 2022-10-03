@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Thavalon</title>
+  </head>
+  <body>
+    <table>
+        <tr>
+            <td>
+                <label for="username">User name:</label>
+            </td>
+            <td>
+                <input type="text" id="username" name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="game">Game ID:</label>
+            </td>
+            <td>
+                <input type="text" id="game" name="game">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button onclick="join()">Join</button>
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>
+<script>
+    function join() {
+        let username = document.getElementById('username').value;
+        let game = document.getElementById('game').value;
+        window.location.href = `game/${game}/${username}`
+        console.log(username, game);
+    }
+</script>
